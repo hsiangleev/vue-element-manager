@@ -1,0 +1,30 @@
+$logoColor: #fff;
+$logoBgColor: #20222a;
+
+$sidebarColor: #fff;
+$sidebarBgColor: #20222a;
+$sidebarNotFirstNavColor: #fff;
+$sidebarNotFirstNavBgColor: rgba(0,0,0,.3);
+$sidebarNavActiveColor: #fff;
+$sidebarNavActiveBgColor: #009688;
+$sidebarWidth: 210px;
+
+$navbarColor: #fff;
+$navbarBgColor: #393D49;
+$navbarHeight: 50px;
+
+// 面包屑
+$navbarBreadcrumbColor: #97a8be;
+$navbarBreadcrumbLinkColor: #c7d1df;
+$navbarBreadcrumbLinkColor_hover: #6c97d3;
+
+$tagsColor: #000;
+$tagsBgColor: #fff;
+$tagsBorderColor: #f2f2f2;
+$tagsActiveColor: #f2f2f2;
+$tagsHeight: 40px;
+
+:export {
+    sidebarColor: $sidebarColor;
+    sidebarBgColor: $sidebarBgColor;
+}

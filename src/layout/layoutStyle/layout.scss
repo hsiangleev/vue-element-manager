@@ -1,0 +1,72 @@
+@import "./config.scss";
+.first-menu>li>.el-submenu__title,
+.first-menu>li.el-menu-item{
+    color: $sidebarColor !important;
+    background-color: $sidebarBgColor !important;
+}
+
+.first-menu .el-submenu__title,
+.first-menu .el-menu-item{
+    color: $sidebarNotFirstNavColor !important;
+    background-color: $sidebarNotFirstNavBgColor !important;
+}
+
+// .first-menu .el-submenu__title:hover,
+// .first-menu .el-menu-item:hover,
+.first-menu .el-menu-item.is-active{
+    color: $sidebarNavActiveColor !important;
+    background-color: $sidebarNavActiveBgColor !important;
+}
+
+.app-navbar .tags-nav .el-breadcrumb__item{
+    .el-breadcrumb__inner{
+        color: $navbarBreadcrumbColor;
+        &:hover{
+            color: $navbarBreadcrumbColor;
+        }
+        &.is-link{
+            color: $navbarBreadcrumbLinkColor;
+            &:hover{
+                color: $navbarBreadcrumbLinkColor_hover;
+            }
+        }
+    }
+    &:last-child .el-breadcrumb__inner{
+        color: #97a8be;
+    }
+}
+
+.app-sidebar-nav{
+    width: 100%;
+    height: calc(100% - 50px);
+    .el-scrollbar{
+        height: 100%;
+        .scrollbar-wrapper{
+            overflow-x: hidden !important;
+        }
+    }
+}
+
+.header-tags{
+    width: 100%;
+    .el-scrollbar{
+        width: 100%;
+        white-space: nowrap;
+        .scrollbar-wrapper{
+            overflow-y: hidden !important;
+        }
+    }
+}
+
+.app-navbar-right-search input{
+    position: relative;
+    font-size: 14px;
+    z-index: 2;
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 22px;
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    line-height: 40px;
+}
