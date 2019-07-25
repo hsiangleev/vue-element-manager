@@ -23,6 +23,7 @@ import appContent from "~/layout/components/appContent"
 import tags from "~/layout/components/tags"
 import logo from "~/layout/components/logo"
 import { mapMutations } from 'vuex'
+import {windowResize} from "~/utils/common.js"
 export default {
     name: 'Layout',
     components: {
@@ -49,7 +50,7 @@ export default {
             hideSidebar: "hideSidebar"
         }),
         init() {
-            window.addEventListener("resize",()=>{
+            windowResize(200,()=>{
                 this.changePadStatus();
             })
         },

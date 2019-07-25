@@ -13,12 +13,13 @@ export const routeList=[
     },
     {
         path: '/',
-        meta: {title: "首页",icon: "el-icon-setting"},
+        meta: {title: "首页",icon: "el-icon-s-home"},
         component: () => import('~/views/index/index.vue'),
     },
     {
         path: '/components',
         meta: {title: "组件",icon: "el-icon-setting"},
+        redirect: "/components/tree",
         component: () => import('~/views/components/index.vue'),
         children: [
             {
@@ -29,20 +30,21 @@ export const routeList=[
             {
                 path: '/components/cascader',
                 meta: {title: "Cascader级联选择器",icon: ""},
-                // meta: {title: "Cascader级联选择器",icon: "",isHide: true},
                 component: () => import('~/views/components/cascader/index.vue')
             }
         ],
     },
     {
         path: '/menu',
-        meta: {title: "多级菜单",icon: "el-icon-setting"},
+        meta: {title: "多级菜单",icon: "el-icon-menu"},
         component: () => import('~/views/menu/index.vue'),
+        redirect: "/menu/menu1",
         children: [
             {
                 path: '/menu/menu1',
                 meta: {title: "第二层",icon: ""},
                 component: () => import('~/views/menu/menu1/index.vue'),
+                redirect: "/menu/menu1/menu2",
                 children: [
                     {
                         path: '/menu/menu1/menu2',
@@ -55,7 +57,7 @@ export const routeList=[
     },
     {
         path: '/about',
-        meta: {title: "关于",icon: "el-icon-setting"},
+        meta: {title: "关于",icon: "el-icon-sugar"},
         component: () => import('~/views/about/index.vue'),
     },
 ]

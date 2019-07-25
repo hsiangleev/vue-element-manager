@@ -4,7 +4,7 @@
         <el-scrollbar wrap-class="scrollbar-wrapper">
             <div class="header-tags-page">
                     <ul>
-                        <li :class="{active: $route.path==='/'}"><span class="header-tags-noclose" @click="changeRoute('/')">首页</span></li>
+                        <li :class="{active: $route.path==='/'}"><span class="header-tags-noclose" @click="changeRoute('/')"><i class="el-icon-s-home"></i></span></li>
                         <li :class="{active: val.path===$route.path}" v-for="(val, index) in tagsCacheList" :key="val.path" @contextmenu.prevent="showTagsMenu($event,val.path, index)">
                             <span @click="changeRoute(val.path)">{{ val.title }}</span>
                             <i class="el-icon-close" @click="removeTags(val.path, index)"></i>
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import {windowResize} from "~/utils/common.js"
 export default {
     name: 'tags',
     data() {
@@ -94,14 +95,16 @@ export default {
     },
     mounted() {
         document.addEventListener("click",this.hideTagsMenu)
-        window.addEventListener("resize",this.hideTagsMenu)
+        windowResize(200,()=>{
+            this.isShowTagsMenu && this.hideTagsMenu()
+        })
     },
 }
 
 </script>
 
 <style lang="scss" scoped>
-    @import "../layoutStyle/config.scss";
+    @import "~/layout/layoutStyle/config.scss";
     .header-tags{
         width: 100%;
         height: $tagsHeight;
@@ -130,8 +133,8 @@ export default {
                         border-radius: 50%;
                         padding: 2px;
                         &:hover{
-                            background-color: #f69;
-                            color: #fff;
+                            background-color: $tagsCloseHoverBgColor;
+                            color: $tagsCloseHoverColor;
                         }
                     }
                     &.active{
@@ -143,6 +146,10 @@ export default {
                         padding: 0px 35px 0 20px;
                         &.header-tags-noclose{
                             padding-right: 20px;
+                            i{
+                                font-size: 20px;
+                                vertical-align: middle;
+                            }
                         }
                     }
                     &:last-of-type{

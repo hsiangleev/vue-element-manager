@@ -1,5 +1,5 @@
 <template>
     <div style="padding:30px;">
-        主页12
+        主页
     </div>
 </template>

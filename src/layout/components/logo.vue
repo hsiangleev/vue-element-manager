@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import "../layoutStyle/config.scss";
+    @import "~/layout/layoutStyle/config.scss";
     .app-sidebar-logo{
         width: 100%;
         height: $navbarHeight;

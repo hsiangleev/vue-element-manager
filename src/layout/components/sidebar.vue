@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import sidebarStyle from "../layoutStyle/config.scss"
+import sidebarStyle from "~/layout/layoutStyle/config.scss"
 import sidebarItem from "./sidebarItem"
 export default {
     name: 'sidebar',

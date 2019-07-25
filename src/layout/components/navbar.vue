@@ -90,7 +90,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import "../layoutStyle/config.scss";
+    @import "~/layout/layoutStyle/config.scss";
     .app-navbar{
         width: 100%;
         height: $navbarHeight;
