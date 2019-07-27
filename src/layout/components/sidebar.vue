@@ -48,17 +48,15 @@ export default {
         // console.log(sidebarStyle)
     },
     methods: {
-        select(key, keyPath, el) {
-            setTimeout(() => {
-                let path=this.$route.path
-                if(path==="/"){
-                    return void this.$router.push({ path: "/" })
-                }
-                this.$store.commit('pushTagsCacheList',{
-                    path,
-                    title: this.$route.meta.title,
-                })
-            }, 100);
+        select(path, keyPath, el) {
+            var text=el.$el.querySelector("span").innerText;
+            if(path==="/"){
+                return void this.$router.push({ path: "/" })
+            }
+            this.$store.commit('pushTagsCacheList',{
+                path,
+                title: text,
+            })
         }
     }
 }
