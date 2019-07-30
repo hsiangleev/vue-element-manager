@@ -1,31 +1,28 @@
 # vue-element-manager
 
-## Project setup
-```
-npm install
-```
+## vue + elementUI 创建后台管理系统框子
 
-### Compiles and hot-reloads for development
+## [demo](https://vueadmin.hsianglee.cn)
+
+## 下载项目
+1. 使用脚手架
+    ```
+    npm install vue-element-manager -g
+    vue-element-manager init <projName>
+    ```
+2. 直接下载
+    ```
+    git clone https://github.com/hsiangleev/vue-element-manager.git
+    ```
+
+## 构建项目
 ```
+cd <projName>
+npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+## 编译压缩
 ```
 npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
 ```
