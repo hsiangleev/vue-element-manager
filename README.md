@@ -5,8 +5,8 @@
 ### 下载项目
 1. 使用脚手架
     ```
-    npm install vue-element-manager -g
-    vue-element-manager init <projName>
+    npm install vue-element-manager-cli -g
+    vue-element-manager-cli init <projName>
     ```
 2. 直接下载
     ```
