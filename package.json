@@ -1,9 +1,9 @@
 {
-  "name": "{{name}}",
+  "name": "vue-element-manager",
   "version": "0.1.0",
   "private": true,
-  "description": "{{description}}",
-  "author": "{{author}}",
+  "description": "vue-element-manager脚手架工具",
+  "author": "hsianglee",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
