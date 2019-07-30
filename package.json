@@ -2,7 +2,7 @@
   "name": "vue-element-manager",
   "version": "0.1.0",
   "private": true,
-  "description": "vue-element-manager脚手架工具",
+  "description": "A management system written using vue+elementUI",
   "author": "hsianglee",
   "scripts": {
     "serve": "vue-cli-service serve",
