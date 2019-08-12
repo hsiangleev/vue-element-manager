@@ -22,6 +22,7 @@
 <script>
 import sidebarStyle from "~/layout/layoutStyle/config.scss"
 import sidebarItem from "./sidebarItem"
+import { mapMutations } from 'vuex'
 export default {
     name: 'sidebar',
     data() {
@@ -48,6 +49,9 @@ export default {
         // console.log(sidebarStyle)
     },
     methods: {
+        ...mapMutations({
+            hideSidebar: "hideSidebar"
+        }),
         select(path, keyPath, el) {
             var text=el.$el.querySelector("span").innerText;
             if(path==="/"){
@@ -57,6 +61,9 @@ export default {
                 path,
                 title: text,
             })
+            if(this.$store.state.layout.isPad){
+                this.hideSidebar();
+            }
         }
     }
 }
